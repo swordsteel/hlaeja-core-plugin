@@ -17,7 +17,11 @@ plugins {
 }
 
 dependencies {
+    implementation(hlaeja.org.eclipse.jgit)
+
+    testImplementation(hlaeja.io.mockk)
     testImplementation(hlaeja.kotlin.test)
+    testImplementation(hlaeja.org.junit.jupiter.params)
 }
 
 gradlePlugin.plugins.create("hlaeja-core-plugin") {
