@@ -8,6 +8,10 @@ One Gradle plugin to rule them all, a simple thing to bind the tasks and in auto
 
 The GitExtension enhances versioning by dynamically appending the Git hash before "snapshot" in the version string. For example, `0.0.0-SNAPSHOT` becomes `0.0.0.0a2b3c4d-SNAPSHOT`, ensuring each build reflects its commit origin, prevents overwriting existing versions. This feature aids developers during development by providing clear version identification.
 
+### Extension Info
+
+The InfoExtension provides information for name and version, vendor name, and UTC timestamp.
+
 ## Releasing plugin
 
 Run `release.sh` script from `master` branch.
