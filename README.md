@@ -12,6 +12,10 @@ The GitExtension enhances versioning by dynamically appending the Git hash befor
 
 The InfoExtension provides information for name and version, vendor name, and UTC timestamp.
 
+### Extension Config
+
+The ConfigExtension provides a find or findOrDefault for getting a property or environment.
+
 ## Releasing plugin
 
 Run `release.sh` script from `master` branch.

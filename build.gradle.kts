@@ -19,9 +19,11 @@ plugins {
 dependencies {
     implementation(hlaeja.org.eclipse.jgit)
 
-    testImplementation(hlaeja.io.mockk)
+    testImplementation(hlaeja.assertj.core)
+    testImplementation(hlaeja.junit.jupiter.params)
+    testImplementation(hlaeja.kotlin.reflect)
     testImplementation(hlaeja.kotlin.test)
-    testImplementation(hlaeja.org.junit.jupiter.params)
+    testImplementation(hlaeja.mockk)
 }
 
 gradlePlugin.plugins.create("hlaeja-core-plugin") {
@@ -112,6 +114,8 @@ tasks {
         }
     }
     withType<Test> {
+        // Set TEST_ENV environment variable for test execution
+        environment["TEST_ENV"] = "hlæja"
         useJUnitPlatform()
     }
 }
