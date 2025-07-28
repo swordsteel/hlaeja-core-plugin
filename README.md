@@ -18,7 +18,7 @@ The ConfigExtension provides a find or findOrDefault for getting a property or e
 
 ## Releasing plugin
 
-Run `release.sh` script from `master` branch.
+Run release pipeline from `master` branch.
 
 ## Publishing plugin
 
