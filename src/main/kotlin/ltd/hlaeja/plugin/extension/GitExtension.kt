@@ -12,7 +12,7 @@ abstract class GitExtension(private val project: Project) {
         private const val HASH_LENGTH = 8
         private const val SNAPSHOT = "-SNAPSHOT"
         private const val UNAVAILABLE = "n/a"
-        private val PRIMARY_BRANCHES = setOf("master")
+        private val PRIMARY_BRANCHES = setOf("master", "develop")
     }
 
     fun version(): String = when {

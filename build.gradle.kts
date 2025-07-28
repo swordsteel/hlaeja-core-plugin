@@ -8,9 +8,9 @@ import java.time.format.DateTimeFormatter.ofPattern
 import org.jlleitschuh.gradle.ktlint.reporter.ReporterType.SARIF
 
 plugins {
-    alias(hlaeja.plugins.io.gitlab.arturbosch.detekt)
+    alias(hlaeja.plugins.gradle.detekt)
+    alias(hlaeja.plugins.gradle.ktlint)
     alias(hlaeja.plugins.kotlin.jvm)
-    alias(hlaeja.plugins.org.jlleitschuh.gradle.ktlint)
 
     `kotlin-dsl`
     `maven-publish`
@@ -84,9 +84,10 @@ tasks {
     register("buildInfo") {
         group = "hlaeja"
         description = "Prints the project name and version"
-
+        val projectName = project.name
+        val projectVersion = project.version
         doLast {
-            println("Project Name: ${project.name} Version: ${project.version}")
+            println("Project Name: $projectName Version: $projectVersion")
         }
     }
     withType<Detekt> {
