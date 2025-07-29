@@ -16,11 +16,11 @@ The InfoExtension provides information for name and version, vendor name, and UT
 
 The ConfigExtension provides a find or findOrDefault for getting a property or environment.
 
-## Releasing plugin
+## Releasing Plugin
 
 Run release pipeline from `master` branch.
 
-## Publishing plugin
+## Publishing Plugin
 
 ### Publish plugin locally
 
@@ -31,7 +31,7 @@ Run release pipeline from `master` branch.
 ### Publish plugin to repository
 
 ```shell
-./gradlew clean build publish
+./gradlew clean build publishAllPublicationsToGitHubPackagesRepository
 ```
 
 ### Global gradle properties
